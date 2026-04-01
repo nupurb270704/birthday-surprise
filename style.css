@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  overflow-x: hidden;
+}
+
+.center {
+  text-align: center;
+  margin-top: 30vh;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff4d6d;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.glow {
+  text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d;
+}
+
+.gift {
+  font-size: 90px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.side img {
+  width: 150px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px pink;
+}
+
+.message {
+  width: 40%;
+  font-size: 16px;
+}
+
+#text {
+  white-space: pre-line;
+}
+
+/* Floating Hearts */
+.hearts::before {
+  content: "💖 💕 💗 💓 💞";
+  position: absolute;
+  width: 100%;
+  animation: float 10s linear infinite;
+  font-size: 24px;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .side img {
+    width: 100px;
+  }
+
+  .message {
+    width: 90%;
+  }
+}
